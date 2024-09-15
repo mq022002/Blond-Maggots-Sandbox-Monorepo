@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, make_response
 import sqlite3
 
 app = Flask(__name__)
@@ -16,7 +16,9 @@ def get_plants():
 
     conn.close()
 
-    return jsonify(plants)
+    response = make_response(jsonify(plants))
+    response.headers["Access-Control-Allow-Origin"] = "*"
+    return response
 
 
 if __name__ == "__main__":
