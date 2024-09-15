@@ -1,3 +1,8 @@
+"""
+This script creates a table named 'plants' in a SQLite database and inserts five records into it.
+Each record represents a plant with an id, name, type, and origin.
+"""
+
 import sqlite3
 
 conn = sqlite3.connect("python/db.sqlite3")
