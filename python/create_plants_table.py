@@ -5,7 +5,7 @@ Each record represents a plant with an id, name, type, and origin.
 
 import sqlite3
 
-conn = sqlite3.connect("db.sqlite3")
+conn = sqlite3.connect("python/db.sqlite3")
 c = conn.cursor()
 
 c.execute(
