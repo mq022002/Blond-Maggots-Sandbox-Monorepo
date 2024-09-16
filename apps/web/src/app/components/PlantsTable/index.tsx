@@ -1,13 +1,4 @@
-interface Plant {
-  id: number;
-  name: string;
-  type: string;
-  origin: string;
-}
-
-interface PlantsTableProps {
-  plants: Plant[];
-}
+import { PlantsTableProps } from "@/app/types";
 
 const PlantsTable: React.FC<PlantsTableProps> = ({ plants }) => (
   <div className="flex justify-center items-center py-20">
