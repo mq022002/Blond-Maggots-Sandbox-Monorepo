@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Plant } from "@/app/types";
-import getPlants from "@/app/utils/getPlants";
-import PlantsTable from "@/app/components/PlantsTable";
+import { Plant } from "@/types";
+import getPlants from "@/utils/getPlants";
+import PlantsTable from "@/components/PlantsTable";
 
 export default function HomePage() {
   const [plants, setPlants] = useState<Plant[]>([]);

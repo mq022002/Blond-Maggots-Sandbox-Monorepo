@@ -1,4 +1,4 @@
-import { PlantsTableProps } from "@/app/types";
+import { PlantsTableProps } from "@/types";
 
 const PlantsTable: React.FC<PlantsTableProps> = ({ plants }) => (
   <div className="flex justify-center items-center py-20">
