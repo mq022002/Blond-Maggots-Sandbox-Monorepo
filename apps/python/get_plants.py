@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/api/plants", methods=["GET"])
 def get_plants():
-    conn = sqlite3.connect("python/db.sqlite3")
+    conn = sqlite3.connect("apps/python/db.sqlite3")
     c = conn.cursor()
 
     c.execute("SELECT * FROM plants")
