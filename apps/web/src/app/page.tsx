@@ -22,8 +22,8 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="flex justify-center items-center h-screen">
-      <table className="w-4/5 border-collapse border border-black mx-auto">
+    <div className="flex justify-center items-center py-20">
+      <table className="w-4/5 border-collapse border border-black mx-auto overflow-auto">
         <thead>
           <tr>
             <th className="p-4 text-left border border-black bg-green-500 text-white">
