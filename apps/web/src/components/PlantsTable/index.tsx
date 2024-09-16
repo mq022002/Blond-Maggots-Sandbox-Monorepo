@@ -1,33 +1,38 @@
+import { ReactNode } from "react";
 import { PlantsTableProps } from "@/types";
+
+interface ChildrenProps {
+  children: ReactNode;
+}
+
+const TableCell: React.FC<ChildrenProps> = ({ children }) => (
+  <td className="p-4 text-left border border-black">{children}</td>
+);
+
+const TableHeader: React.FC<ChildrenProps> = ({ children }) => (
+  <th className="p-4 text-left border border-black bg-green-500 text-white">
+    {children}
+  </th>
+);
 
 const PlantsTable: React.FC<PlantsTableProps> = ({ plants }) => (
   <div className="flex justify-center items-center py-20">
     <table className="w-4/5 border-collapse border border-black mx-auto overflow-auto">
       <thead>
         <tr>
-          <th className="p-4 text-left border border-black bg-green-500 text-white">
-            ID
-          </th>
-          <th className="p-4 text-left border border-black bg-green-500 text-white">
-            Name
-          </th>
-          <th className="p-4 text-left border border-black bg-green-500 text-white">
-            Type
-          </th>
-          <th className="p-4 text-left border border-black bg-green-500 text-white">
-            Origin
-          </th>
+          <TableHeader>ID</TableHeader>
+          <TableHeader>Name</TableHeader>
+          <TableHeader>Type</TableHeader>
+          <TableHeader>Origin</TableHeader>
         </tr>
       </thead>
       <tbody>
         {plants.map((plant) => (
           <tr key={plant.id}>
-            <td className="p-4 text-left border border-black">{plant.id}</td>
-            <td className="p-4 text-left border border-black">{plant.name}</td>
-            <td className="p-4 text-left border border-black">{plant.type}</td>
-            <td className="p-4 text-left border border-black">
-              {plant.origin}
-            </td>
+            <TableCell>{plant.id}</TableCell>
+            <TableCell>{plant.name}</TableCell>
+            <TableCell>{plant.type}</TableCell>
+            <TableCell>{plant.origin}</TableCell>
           </tr>
         ))}
       </tbody>
