@@ -1,19 +1,6 @@
-import { ReactNode } from "react";
 import { PlantsTableProps } from "@/types";
-
-interface ChildrenProps {
-  children: ReactNode;
-}
-
-const TableCell: React.FC<ChildrenProps> = ({ children }) => (
-  <td className="p-4 text-left border border-black">{children}</td>
-);
-
-const TableHeader: React.FC<ChildrenProps> = ({ children }) => (
-  <th className="p-4 text-left border border-black bg-green-500 text-white">
-    {children}
-  </th>
-);
+import TableCell from "./TableCell";
+import TableHeader from "./TableHeader";
 
 const PlantsTable: React.FC<PlantsTableProps> = ({ plants }) => (
   <div className="flex justify-center items-center py-20">
